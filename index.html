@@ -1,0 +1,407 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<html>
+<head>
+	<title>GDIP</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="Creative and Descriptive Paper Title." />
+	<meta property="og:description" content="Paper description." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">GDIP: Object-Detection in Adverse Weather Conditions Using Gated Differentiable Image Processing</span>
+		<table align=center width=1000px>
+			<table align=center width=1000px cellspacing="5px">
+                <br>
+				<tr>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.linkedin.com/in/sanket-kalwar-458801119/" target=”_blank”>Sanket Kalwar<sup>1</sup>*</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://dhruv2012.github.io/" target=”_blank”>Dhruv Patel<sup>1</sup>*</a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="">Aakash Aanegola<sup>1</sup></a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://scholar.google.com/citations?user=sLJrNq0AAAAJ&hl=en" target=”_blank”>Krishna Reddy Konda<sup>3</sup></a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://research.qut.edu.au/qcr/people/sourav-garg/" target=”_blank”>Sourav Garg<sup>2</sup></a></span>
+						</center>
+					</td>
+					<td align=center width=150px>
+						<center>
+							<span style="font-size:20px"><a href="https://www.iiit.ac.in/people/faculty/mkrishna/" target=”_blank”>K Madhava Krishna<sup>1</sup></a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+            <table align=center width="100%">
+                <br>
+                <tr>
+                    <td align=center width="100%">
+						<center>
+							<h5>
+								<i>Accepted at ICRA 2023</i>
+							</h5>
+						</center>
+                        <center>
+                            <span style="font-size:12px">
+                                <b>*</b> denotes equal contribution <br>
+                                1 Robotics Research Centre, IIIT Hyderabad, India. <br>
+                                2 Australian Centre for Robotic Vision at the Queensland University of Technology (QUT), Brisbane, Australia.<br>
+                                3 ZF Friedrichshafen TCI, Hyderabad, India 
+                            </span>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href='https://arxiv.org/abs/2209.14922' target="_blank">[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href='https://github.com/Gatedip/GDIP-Yolo' target="_blank">[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<br>
+            <table align=center width=800px>
+                <tr>
+                    <td width=260px>
+                        <center>
+                            <img class="round" style="width:700px" src="assets/images/teaser_webpage-1.jpg"/>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+
+		</table>
+	</center>
+
+	<center>
+		<!-- <table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:750px" src="assets/images/Teaser_best_v1.3.png"/>
+					</center>
+				</td>
+			</tr>
+		</table> -->
+		<table align=center width=850px>
+			<!-- <tr>
+				<td> <center>
+					Architecture of automated building inspection using the aerial images captured using UAV. The odometry information of UAV is also used for the quantification of different parameters involved in the inspection. <center>
+				</td>
+			</tr> -->
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Motivation</h1></center>
+		<tr>
+			<td>
+				<ul>
+					Object detection is challenging under adverse weather conditions (such as fog or low-lighting) 
+					because the objects are partially or not visible, resulting in missed detections.
+
+					<br><br>
+					We tackle this problem by proposing a <b> Gated Differentiable Image Processing (GDIP) block</b>, which 
+					enhances the image by performing weighted Image Processing (IP) operations concurrently on the adverse input image. This 
+					enhanced output is sent to the downstream object detection network, leading to superior detection performance 
+					to other state-of-the-art methods.
+				
+					<br><br>
+				
+					<figure>
+						<img style="width:300px; margin-right: 100px" src="assets/images/motivaton_foggy.png"/>
+						<img style="width:300px" src="assets/images/motivaton_dark.jpg"/>
+						<figcaption align="center">real-world foggy (RTTS dataset) and dark (ExDark dataset) images with annotations</figcaption>
+					</figure>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+	<table align=center width=850px>
+		<center><h1>Overview</h1></center>
+		<!-- <p align=center> To be updated</p> -->
+		<tr>
+			<td>
+				<ul>
+					<li>We present <b>Gated Differentiable Image Processing (GDIP) block</b>, <i>a domain-agnostic architecture</i> which adaptively enhances adverse images for object detection by performing concurrent gated-weighing of image
+						processing operations.
+					<li>GDIP provides flexible <b>concurrent gated weighting</b> of the individual IP operations that result in superior detection performance.</li>
+					<li>GDIP block can be integrated as <b>single or multi-level enhancement module</b> with an encoder</li>
+					<li>In addition, GDIP block has a unique advantage with its utility as a <b>training regularizer</b>, which directly improves object detection training for adverse conditions. This
+					eliminates any image enhancement overhead during inference, unlike other state-of-the-art works, thus resulting in higher throughput.</li>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Modules</h1></center>
+		<tr>
+			<td> <p>Using our GDIP block, we propose novel variants as below:</p>
+				<ul>
+					<li> <b>GDIP-Yolo: </b>  a single GDIP block (fed with an adverse input and latent embeddings from an encoder) 
+						can be plugged into existing object detection networks (e.g., Yolo) and trained end-to-end with 
+						adverse condition images (fog and low-lighting).
+						<figure align=center>
+							<img style="width:500px" src="assets/images/gdip_forwardpass.gif"/>
+							<figcaption align="center">GDIP-Yolo Forward Pass
+							</figcaption>
+						</figure>
+					<br>
+					<li> <b>Multi-level GDIP-Yolo (MGDIP-Yolo):</b> a multi-level version of GDIP where an 
+						image is progressively enhanced through multiple GDIP blocks, each guided by a different layer 
+						of the image encoder. Providing access to such multiple feature scales helps it utlilize 
+						the local/global properties to selectively apply Image Processing operations. 
+						<figure align=center>
+							<img style="width:500px" src="assets/images/mgdip_forwardpass.gif"/>
+							<figcaption align="center">MGDIP-Yolo Forward Pass
+							</figcaption>
+						</figure>
+					<br>
+
+					<li> <b>GDIP as regularizer:</b> an adaptation of GDIP as training regularizer, 
+						which directly improves object detection training by learning weather-invariant features. 
+						It can be removed during inference, thus saving compute time with improved performance in adverse conditions.
+						<br><br>
+							<figure align=center>
+								<img align="center" style="width:400px" src="assets/images/gdip_reg.jpg"/>
+								<figcaption align="center">GDIP as regularizer</figcaption>
+							</figure>
+					</li>
+					<br><br>
+
+				</ul>
+			
+			</td>
+		</tr>
+	</table>
+
+	<br>
+
+	<hr>
+	<table align=center width=850px>
+		<center><h1>Quantitative Analysis</h1></center>
+		<tr>
+			<td>
+				<ul>
+					<p align=center style="font-size: 20px">Foggy setting</p>
+					<figure align =center>
+						<img style="width:400px" src="assets/images/quantitative_fog.PNG"/>
+						<figcaption align="center" style="font-size: 13px"> Quantitative results for foggy conditions on the V_N_Ts
+							(VOCNormal Test set), V_F_Ts (VOCFoggy Test set) and realworld RTTS dataset. Best and second best mAP scores are bold
+							and italicized, respectively
+						</figcaption>
+					</figure>
+
+					<p align=center style="font-size: 20px">Low-lighting setting</p>
+					<figure align =center>
+						<img style="width:400px" src="assets/images/quantitative_dark.PNG"/>
+						<figcaption align="center" style="font-size: 13px">  Quantitative results for low-lighting conditions on the
+							V_N_Ts (VOCNormal Test set), V_D_Ts (VOCDark Test set) and
+							real-world ExDark dataset. Best and second best mAP scores are
+							bold and italicized, respectively. 
+							<br><br>
+							<b>NOTE:</b> IA-Yolo uses a prior (i.e. IA-Yolo (with prior)) for low-lighting setting by removing the defogging and 
+							white balance filters. Hence, we evaluate IA-Yolo (w/o prior) by incorporating the defogging and white balance filters 
+							(their same pipeline as in case of foggy setting) to do fair comparison with our approach.
+						</figcaption>
+					</figure>
+				</ul>
+			
+			</td>
+		</tr>
+	</table>
+
+	<hr>
+	<table align=center width=850px>
+		<center><h1>GDIP in the Wild</h1></center>
+		<tr>
+			<td>
+				<ul>
+					<p>GDIP runs seamlessly on video sequences in the wild without any need for retraining or fine tuning, 
+						showcasing its ability to detect objects by composing Image Processing operations through gating by training on only synthetic adverse data.
+					</p>
+					<br>
+					<figure>
+						<img style="width:800px; margin-right: 100px" src="assets/images/dark_realworld_highquality.gif"/>
+						<figcaption align="center"><b>Note:</b> how as the car moves from complete darkness to natural lighting, the gate firing changes from only gamma to gamma, defog and tone.
+						</figcaption>
+
+						<br><br>
+						<img style="width:800px" src="assets/images/foggy_realworld_highquality.gif"/>
+						<figcaption align="center">Our GDIP-Yolo does robust detection with defog gate firing, which is consistent
+							 with the foggy weather setting.</figcaption>
+					</figure>
+				</ul>
+			
+			</td>
+		</tr>
+	</table>
+
+	<br>
+
+
+	<!-- <center> <h3> Distance between Adjacent Buildings </h3>
+	<img class="round" style="width:1000px" src="assets/images/DistanceModule.png"/>
+	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and perform panoptic segmentation using state-of-art deep learning model, eliminating vegetation (like trees) from the images. The masked images are then fed to a state-of-the art image-based 3D reconstruction library which outputs a dense 3D point cloud. We then apply RANSAC for fitting planes between the segmented structural point cloud. Further, the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
+	</center>
+	<br> -->
+
+
+	<!-- <center> <h3> Results: Distance between Adjacent Buildings </h3>
+	<img class="round" style="width:800px" src="assets/images/Results-DistanceModule-1.png"/>
+	<p> Sub-figures (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for two subject buildings.</p>
+	
+	</center>
+	<br> -->
+
+
+
+
+	<!-- <center> <h3> Plan Shape and Roof Area Estimation </h3>
+	<img class="round" style="width:1000px" src="assets/images/PlanShape&RoofareaEstimation.png"/>
+	<p>This module provides information regarding the shape and roof area of the building. We segment the roof using a state-of-the-art semantic segmentation deep learning model. We also subjected the input images to a pre-processing module that removes distortions from the wide-angle images. Data augmentation was used to increase the robustness and performance. Roof Area was calculated using the focal length of the camera, the height of the drone from the roof and the segmented mask area in pixels.
+</p>
+	</center>
+	<br>
+
+
+
+	<center> <h3> Results: Plan Shape and Roof Area Estimation </h3>
+	<img class="round" style="width:800px" src="assets/images/Results-PlanShape&RoofareaEstimation-1.png"/>
+	<p>This figure represents the roof segmentation results for 4 subject buildings.</p>
+	
+	</center>
+	<br>
+
+
+	<center> <h3> Roof Layout Estimation </h3>
+	<img class="round" style="width:1000px" src="assets/images/RoofLaoutEstimation.png"/>
+	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings, we perform large scale image stitching of partially visible roofs followed by NSE detection and roof segmentation.
+
+</p>
+	</center>
+	<br> -->
+
+
+
+	<!-- <center> <h3> Results: Roof Layout Estimation </h3>
+	<img class="round" style="width:800px" src="assets/images/imagestitchingoutput.jpeg"/>
+	<p>Stitched Image</p>
+	<img class="round" style="width:800px" src="assets/images/roofmask.png"/>
+	<p>Roof Mask</p>
+	<img class="round" style="width:800px" src="assets/images/objectmask.png"/>
+	<p>Object Mask</p>
+	
+	</center>
+	<br> -->
+
+
+
+
+<!--
+
+	<center> <h1> Resources </h1>
+	<table width="100%" style="margin: 20pt auto; text-align: center;">
+	      <tr>
+				<td width="33%" valign="middle">
+				    <center>
+					<a href="https://github.com/atmacvit/meronymnet" target="_blank"
+					   class="imageLink"><img src="./resources/Octocat.png" ,=, width="75%" /></a><br /><br />
+					<a href="https://github.com/atmacvit/meronymnet" target="_blank">Code</a>
+				    </center>
+				</td>
+				<td width="33%" valign="middle">
+				    <center>
+					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank"
+					   class="imageLink"><img src="./resources/Paper_crop.png" ,=, width="75%" /></a><br /><br />
+					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank">Paper</a>
+				    </center>
+
+				</td>
+
+
+			       <td width="33%" valign="middle">
+				    <center>
+					<a href="" target="_blank"
+					   class="imageLink"><img src="./resources/Supp_crop.png" ,=, width="75%" /></a><br /><br />
+					<a href="" target="_blank">Supplementary</a>
+				    </center>
+				</td>
+	      </tr>
+    	</table>
+	</center>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br> -->
+<hr>
+<center> <h1> Contact </h1>
+	<p>If you have any questions, please reach out to any of the above mentioned authors.</p>
+	</center>
+</body>
+</html>
