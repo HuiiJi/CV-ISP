@@ -46,4 +46,4 @@ If you use CV-ISP, please consider citing:
 Should you have any question, please contact me.
 
 ## My Related Works
-- Hazy Image Dehazing Algorithm Based on Two Branch Residual Feature Fusion. [Paper](https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2023.19275) | [Code](https://github.com/HuiiJi/Solve-vision-tasks-with-one-click)
+- JCAD 2022, Hazy Image Dehazing Algorithm Based on Two Branch Residual Feature Fusion. [Paper](https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2023.19275) | [Code](https://github.com/HuiiJi/Solve-vision-tasks-with-one-click)
