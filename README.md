@@ -28,10 +28,10 @@ pip install -r requirements.txt
 ``` 
 
 ## Training and Evaluation
-Training is not available here, but it's useful to  
+Training is not available here, but it's useful to refer to train.py.
 
 ## Results
-Experiments are performed for different image processing tasks including, image deblurring, image deraining and image denoising. My team will release our latest work.
+Experiments are performed for different image processing tasks including, image deblurring, image deraining and image denoising. 
 
 ## Citation
 If you use CV-ISP, please consider citing:
