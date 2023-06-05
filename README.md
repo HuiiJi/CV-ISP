@@ -10,7 +10,7 @@
 git clone地址
 ```
 git clone git@github.com:HuiiJi/CV-ISP.git
-cd GAN_
+cd CV-ISP
 ```
 起一个虚拟环境，配置torch，torchvision等库（**以下命令需要先安装好Anaconda**）
 ```
