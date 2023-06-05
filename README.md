@@ -1,5 +1,5 @@
 # CV-ISP:NN based ISP for extreme CV-tasks 
-<img src = "cvisp-background.png" width = "80%">
+<img src = "cvisp-background.png" width = "120%">
 
 ## **项目大纲**
 
@@ -9,7 +9,7 @@
 
 git clone地址
 ```
-git clone git@github.com:752413464/GAN_.py.git
+git clone git@github.com:752413464/CV-ISP.git
 cd GAN_
 ```
 起一个虚拟环境，配置torch，torchvision等库（**以下命令需要先安装好Anaconda**）
