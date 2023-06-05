@@ -102,21 +102,21 @@
 					<li>Share some <b>paper</b> research and <b>understanding</b> about CV-ISP.</li>
 					<figure align=center>
 							<img style="width:1000px" src="assets/cvisp-papersum.png"/>
-							<figcaption align="center">Paper and idea
+							<figcaption align="center">Paper
 							</figcaption>
 					</figure>
 					
 					<li>According to the experimental direction in the paper, I summarized the possible specific <b>technical routes</b> for CV-ISP.</li>
 					<figure align=center>
 							<img style="width:600px" src="assets/cvisp-route.png"/>
-							<figcaption align="center">technical direction
+							<figcaption align="center">Technical direction
 							</figcaption>
 					</figure>
 					
 					<li><b>The basic implementation of CV-ISP needs to be NN as the backbone and RGB as the output to adapt to the CV task of the general versionr, so it's efficient to achieve Programme c.</li>
 					<figure align=center>
 							<img style="width:400px" src="assets/cvisp-NN.jpg"/>
-							<figcaption align="center">efficient technical programme
+							<figcaption align="center">Efficient technical programme
 							</figcaption>
 					</figure>
 				
@@ -189,7 +189,7 @@
 
 					<figure align =center>
 						<img style="width:600px" src="assets/hvisp-cvisp.png"/>
-						<figcaption align="center" style="font-size: 13px">  Our team's CV-ISP-output for yolov5 in extreme low light testset captured by dark lab.
+						<figcaption align="center" style="font-size: 13px"> CV-ISP-output for yolov5 in extreme low light testset captured by dark lab.
 							<br><br>
 							<b>NOTE:</b> The CV-ISP pipeline total cover <20MBytes and nearly 150G MACs@1080P-fp32. 
 							(show that could be ported to AI computing equipment with low computing power) 
@@ -219,127 +219,6 @@
 			</td>
 		</tr>
 	</table>
-
-	<br>
-
-
-	<!-- <center> <h3> Distance between Adjacent Buildings </h3>
-	<img class="round" style="width:1000px" src="assets/images/DistanceModule.png"/>
-	<p>This module provide us the distance between two adjacent buildings. We sampled the images from the videos captured by UAV and perform panoptic segmentation using state-of-art deep learning model, eliminating vegetation (like trees) from the images. The masked images are then fed to a state-of-the art image-based 3D reconstruction library which outputs a dense 3D point cloud. We then apply RANSAC for fitting planes between the segmented structural point cloud. Further, the points are sampled on these planes to calculate the distance between the adjacent buildings at different locations.</p>
-	</center>
-	<br> -->
-
-
-	<!-- <center> <h3> Results: Distance between Adjacent Buildings </h3>
-	<img class="round" style="width:800px" src="assets/images/Results-DistanceModule-1.png"/>
-	<p> Sub-figures (a), (b) and (c) and (d), (e) and (f) represent the implementation of plane fitting using piecewise-RANSAC in different views for two subject buildings.</p>
-	
-	</center>
-	<br> -->
-
-
-
-
-	<!-- <center> <h3> Plan Shape and Roof Area Estimation </h3>
-	<img class="round" style="width:1000px" src="assets/images/PlanShape&RoofareaEstimation.png"/>
-	<p>This module provides information regarding the shape and roof area of the building. We segment the roof using a state-of-the-art semantic segmentation deep learning model. We also subjected the input images to a pre-processing module that removes distortions from the wide-angle images. Data augmentation was used to increase the robustness and performance. Roof Area was calculated using the focal length of the camera, the height of the drone from the roof and the segmented mask area in pixels.
-</p>
-	</center>
-	<br>
-
-
-
-	<center> <h3> Results: Plan Shape and Roof Area Estimation </h3>
-	<img class="round" style="width:800px" src="assets/images/Results-PlanShape&RoofareaEstimation-1.png"/>
-	<p>This figure represents the roof segmentation results for 4 subject buildings.</p>
-	
-	</center>
-	<br>
-
-
-	<center> <h3> Roof Layout Estimation </h3>
-	<img class="round" style="width:1000px" src="assets/images/RoofLaoutEstimation.png"/>
-	<p>This module provides information about the roof layout. Since it is not possible to capture the whole roof in a single frame specially in the case of large sized buildings, we perform large scale image stitching of partially visible roofs followed by NSE detection and roof segmentation.
-
-</p>
-	</center>
-	<br> -->
-
-
-
-	<!-- <center> <h3> Results: Roof Layout Estimation </h3>
-	<img class="round" style="width:800px" src="assets/images/imagestitchingoutput.jpeg"/>
-	<p>Stitched Image</p>
-	<img class="round" style="width:800px" src="assets/images/roofmask.png"/>
-	<p>Roof Mask</p>
-	<img class="round" style="width:800px" src="assets/images/objectmask.png"/>
-	<p>Object Mask</p>
-	
-	</center>
-	<br> -->
-
-
-
-
-<!--
-
-	<center> <h1> Resources </h1>
-	<table width="100%" style="margin: 20pt auto; text-align: center;">
-	      <tr>
-				<td width="33%" valign="middle">
-				    <center>
-					<a href="https://github.com/atmacvit/meronymnet" target="_blank"
-					   class="imageLink"><img src="./resources/Octocat.png" ,=, width="75%" /></a><br /><br />
-					<a href="https://github.com/atmacvit/meronymnet" target="_blank">Code</a>
-				    </center>
-				</td>
-				<td width="33%" valign="middle">
-				    <center>
-					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank"
-					   class="imageLink"><img src="./resources/Paper_crop.png" ,=, width="75%" /></a><br /><br />
-					<a href="https://drive.google.com/file/d/1NnY4tcV1wnlSWMzT_Ae6hH6v5l8GCIrX/view?usp=sharing" target="_blank">Paper</a>
-				    </center>
-
-				</td>
-
-
-			       <td width="33%" valign="middle">
-				    <center>
-					<a href="" target="_blank"
-					   class="imageLink"><img src="./resources/Supp_crop.png" ,=, width="75%" /></a><br /><br />
-					<a href="" target="_blank">Supplementary</a>
-				    </center>
-				</td>
-	      </tr>
-    	</table>
-	</center>
-	<br>
-
-	<table align=center width=600px>
-		<tr>
-			<td><span style="font-size:14pt"><center>
-				<a href="./resources/bibtex.txt">[Bibtex]</a>
-			</center></td>
-		</tr>
-	</table>
-
-	<hr>
-	<br>
-
-	<table align=center width=900px>
-		<tr>
-			<td width=400px>
-				<left>
-					<center><h1>Acknowledgements</h1></center>
-					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
-				</left>
-			</td>
-		</tr>
-	</table>
-
-<br> -->
-	
-
 	
 <hr>
 <center> <h1> Contact </h1>
