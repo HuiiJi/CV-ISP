@@ -1,5 +1,5 @@
 # CV-ISP:NN based ISP for extreme CV-tasks 
-<img src = "cvisp-background.png" width = "120%">
+<img src = "cvisp-background.png" width = "150%">
 
 ## **项目大纲**
 
