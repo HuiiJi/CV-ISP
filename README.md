@@ -3,7 +3,7 @@
 
 
 ## **项目大纲**
-<img src = "CV-ISP.png" width = "150%">
+![pipe](assets/CV-ISP.png)
 
 ## **Denpendency**
 
