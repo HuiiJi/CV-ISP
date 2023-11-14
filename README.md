@@ -1,9 +1,9 @@
 # CV-ISP:NN based ISP for extreme CV-tasks 
 <img src = "cvisp-background.png" width = "150%">
 
-## **项目大纲**
 
-- [Project](https://huiiji.github.io/CV-ISP/)
+## **项目大纲**
+<img src = "CV-ISP.png" width = "150%">
 
 ## **Denpendency**
 
